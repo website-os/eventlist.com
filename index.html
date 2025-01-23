@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell Events List & Time</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1e1e2f, #3c3c5e);
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            color: #00ffff;
+            animation: glowing-text 2s infinite;
+        }
+        .header h2 {
+            font-size: 2.5em;
+            color: #00ffff;
+            animation: glowing-text 2s infinite;
+        }
+
+        .header h3 {
+            font-size: 1.5em;
+            color: #00ffff;
+            animation: glowing-text 2s infinite;
+        }
+
+        @keyframes glowing-text {
+            0% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffb347; }
+            50% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffb347; }
+            100% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffb347; }
+        }
+
+        .event-list {
+            margin: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .event {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 calc(100% - 40px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .event:hover {
+            transform: scale(1.05);
+        }
+
+        .event h3 {
+            font-size: 1.5em;
+            color: #ffd700;
+        }
+
+        .event-time {
+            font-size: 1.2em;
+            color: #ffb347;
+        }
+
+        .glowing-animation {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .glowing-animation span {
+            display: inline-block;
+            font-size: 1.8em;
+            color: #ff6347;
+            animation: glow-fade 2s infinite;
+        }
+
+        @keyframes glow-fade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .invitations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .invitation {
+            text-align: center;
+            flex: 1 1 calc(50% - 20px);
+        }
+
+        .invitation img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .invitation img:hover {
+            transform: scale(1.1);
+        }
+
+        .invitation h4 {
+            margin-top: 15px;
+            color: #ffd700;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #3c3c5e;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header h2 {
+                font-size: 1.2em;
+            }
+
+            .event {
+                flex: 1 1 100%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .event h3 {
+                font-size: 1.2em;
+            }
+
+            .event-time {
+                font-size: 1em;
+            }
+
+            .invitations {
+                flex-direction: column;
+            }
+
+            .invitation {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header h2 {
+                font-size: 1em;
+            }
+
+            .event h3 {
+                font-size: 1em;
+            }
+
+            .event-time {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Farewell Events List</h1>
+        </div>
+        <div class="header">
+            <h2>Date : 08 February 2025</h2>
+        </div>
+        <div class="header">
+            <h3>Time : 11:15 Am - 01:30 PM</h3>
+        </div>
+        <div class="event-list">
+            <div class="event">
+                <h3>Entry</h3>
+                <p class="event-time">5 min</p>
+                <div class="participants">
+                    <h4>With a song  </h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Introduction</h3>
+                <p class="event-time">5 min</p>
+                <div class="participants">
+                    <h4>Participants: Aishee Basu <br> Richa Samanta </h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Welcome Speech <br>with Poem</h3>
+                <p class="event-time">10 min</p>
+                <div class="participants">
+                    <h4>Participants: Shrestha Basu</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Stand-up Comedy</h3>
+                <p class="event-time">5 min</p>
+                <div class="participants">
+                    <h4>Participants: Suhana Parvin</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Skit</h3>
+                <p class="event-time">15  min</p>
+                <div class="participants">
+                    <h4>Participants: Class XI Boys</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Duet Song</h3>
+                <p class="event-time">7 min</p>
+                <div class="participants">
+                    <h4>Participants: Shruti Mandal <br> & <br> Meghashree Khan</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Games</h3>
+                <p class="event-time">40 min</p>
+                <div class="participants">
+                    <h4>Participants: Class XII Students</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Group Dance</h3>
+                <p class="event-time">10 min</p>
+                <div class="participants">
+                    <h4>Participants: <br> Sukriti Bhowmik <br> Disha Ghosh <br> Suhana Parvin <br> Srabani Choudhary <br> Ankita Chattopadhy <br>  tulashi Behra</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Guitar Performance</h3>
+                <p class="event-time">5 min</p>
+                <div class="participants">
+                    <h4>Participants: Soham Mukherjee</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Student Performances <br>and Reflections</h3>
+                <p class="event-time">20 min</p>
+                <div class="participants">
+                    <h4>Participants: Class XII Students</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Ending Ceremony</h3>
+                <p class="event-time">5 min</p>
+                <div class="participants">
+                    <h4>Participants: Abhinaba Roy</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Speech by Principal Sir</h3>
+                <p class="event-time">20 min</p>
+                <div class="participants">
+                    <h4>Participants: Principal Sir</h4>
+                </div>
+            </div>
+            <div class="event">
+                <h3>Sash and Memento Ceremony <br> and Cake Cutting</h3>
+                <p class="event-time">25 min</p>
+                <div class="participants">
+                    <h4>Participants: School Committee <br>and <br> Class XII Students</h4>
+                </div>
+            </div>
+        </div>
+        <div class="invitations">
+            <div class="invitation">
+                <img src="student invitation.png" alt="Student Invitation" />
+                <h4>For Students</h4>
+            </div>
+            <div class="invitation">
+                <img src="teacher invitation.jpg" alt="Teacher Invitation" />
+                <h4>For Teachers</h4>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025. All rights reserved. Created and Designed by Class XI</p>
+    </footer>
+
+</body>
+</html>
